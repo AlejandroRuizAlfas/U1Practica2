@@ -1,9 +1,6 @@
 package Ejercicio2;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
+import java.io.*;
 import java.util.*;
 
 public class Ejercicio2 {
@@ -25,17 +22,21 @@ public class Ejercicio2 {
             OutputStreamWriter osw = new OutputStreamWriter(os);
             BufferedWriter bw = new BufferedWriter(osw);
 
-            Scanner precesoSC = new Scanner(process.getInputStream());
+            Scanner procesoSC = new Scanner(process.getInputStream());
 
             Scanner sc = new Scanner(System.in);
             String linea = sc.nextLine();
-            while (!linea.equals("stop")){
+            BufferedWriter wrFichero = new BufferedWriter(new FileWriter("randoms.txt"));
+            while (!linea.equalsIgnoreCase("stop")){
                 bw.write(linea);
                 bw.newLine();
                 bw.flush();
-                System.out.println(precesoSC.nextLine());
+                String cadenaRecibida = procesoSC.next();
+                System.out.println(cadenaRecibida);
+                wrFichero.write(cadenaRecibida+"\n");
                 linea = sc.nextLine();
             }
+            wrFichero.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
