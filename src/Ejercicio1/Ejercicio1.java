@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class Ejercicio1 {
     public static void main(String[] args) {
         if (args.length <= 0){
-            System.out.println("No se ha pasado ningñun argumento, cerrando programa");
+            System.out.println("No se ha pasado ningun argumento, cerrando programa");
             System.exit(-1);
         }
 
@@ -37,7 +37,6 @@ public class Ejercicio1 {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(f));
                 while ((line = br.readLine()) != null){
                     writer.write(line+"\n");
-                    System.out.println(line);
                 }
                 writer.close();
             }

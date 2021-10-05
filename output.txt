@@ -1,0 +1,15 @@
+ El volumen de la unidad C es Alejandro
+ El n�mero de serie del volumen es: 76F3-20C2
+
+ Directorio de C:\Github\DAM2\PSP\Unidad1\Entregas\U1Practica2
+
+05/10/2021  17:49    <DIR>          .
+05/10/2021  17:49    <DIR>          ..
+05/10/2021  17:47    <DIR>          .idea
+05/10/2021  10:57    <DIR>          out
+05/10/2021  17:49                 0 output.txt
+05/10/2021  10:43                18 README.md
+05/10/2021  10:56    <DIR>          src
+05/10/2021  10:45               433 U1Practica2.iml
+               3 archivos            451 bytes
+               5 dirs  180.750.876.672 bytes libres
