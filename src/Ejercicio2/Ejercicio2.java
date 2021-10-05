@@ -8,7 +8,14 @@ import java.util.*;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
-        String commands = "java -jar out\\artifacts\\Random10_jar\\U1Practica2.jar";
+        String OS = System.getProperty("os.name");
+        String commands="";
+        if (!OS.equals("Linux")){
+            commands = "java -jar out\\artifacts\\Random10_jar\\U1Practica2.jar";
+        }else{
+            commands = "java -jar out/artifacts/Random10_jar/U1Practica2.jar";
+        }
+
         List<String> argsList = new ArrayList<>(Arrays.asList(commands.split(" ")));
         ProcessBuilder pb = new ProcessBuilder(argsList);
 
